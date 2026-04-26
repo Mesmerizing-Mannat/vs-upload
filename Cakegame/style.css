@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(45deg, #ff9a9e, #fecfef, #fecfef, #ff9a9e);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    max-width: 500px;
+}
+
+h1 {
+    color: #d63384;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu button {
+    background: linear-gradient(45deg, #ff6b9d, #c44569);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.menu button:hover {
+    transform: scale(1.1);
+}
+
+#cake-visual {
+    margin: 20px 0;
+    min-height: 300px;
+}
+
+.real-cake {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    margin: 20px auto;
+    animation: cakeFloat 3s ease-in-out infinite;
+}
+
+@keyframes cakeFloat {
+    0%, 100% { transform: translateY(0px) rotate(-2deg); }
+    50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+/* CAKE BASE - BOTTOM LAYER */
+.cake-base {
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    width: 200px;
+    height: 60px;
+    background: linear-gradient(145deg, #8B4513, #A0522D);
+    border-radius: 20px 20px 10px 10px;
+    box-shadow: 
+        0 8px 16px rgba(0,0,0,0.4),
+        inset 0 2px 4px rgba(255,255,255,0.3);
+}
+
+/* CAKE LAYER 1 */
+.cake-layer1 {
+    position: absolute;
+    bottom: 60px;
+    left: 35px;
+    width: 180px;
+    height: 55px;
+    border-radius: 15px 15px 5px 5px;
+    box-shadow: 
+        0 6px 12px rgba(0,0,0,0.3),
+        inset 0 2px 4px rgba(255,255,255,0.2);
+}
+
+/* CAKE LAYER 2 */
+.cake-layer2 {
+    position: absolute;
+    bottom: 115px;
+    left: 45px;
+    width: 160px;
+    height: 50px;
+    border-radius: 12px 12px 3px 3px;
+    box-shadow: 
+        0 5px 10px rgba(0,0,0,0.3),
+        inset 0 2px 4px rgba(255,255,255,0.2);
+}
+
+/* WHIPPED CREAM TOP */
+.cream-top {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    right: 50px;
+    height: 60px;
+    background: linear-gradient(145deg, #FFF8DC, #F0E68C, #FFFACD);
+    border-radius: 50px 50px 20px 20px;
+    box-shadow: 
+        0 8px 16px rgba(255,255,255,0.6),
+        inset 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+/* SPRINKLES */
+.sprinkles {
+    position: absolute;
+    top: 25px;
+    left: 55px;
+    right: 55px;
+    height: 55px;
+    pointer-events: none;
+}
+
+.sprinkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: sprinkleFall 2s infinite;
+}
+
+@keyframes sprinkleFall {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(10px) rotate(360deg); }
+}
+
+/* CHERRY ON TOP */
+.cherry {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #FF1493, #C71585);
+    border-radius: 50% 50% 50% 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.score {
+    font-size: 24px;
+    color: #28a745;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.guess-input {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #ff6b9d;
+    width: 300px;
+}
